@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="16dp"
+        app:cardElevation="16dp"
+        android:backgroundTint="@color/blue"
+        android:layout_height="?actionBarSize">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:fontFamily="@font/font_space_grotesk"
+                android:letterSpacing="0.05"
+                android:textColor="@color/white"
+                android:text="Contacts"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginHorizontal="16dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:visibility="gone"
+
+                android:id="@+id/container_delete"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/btn_cancel"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/baseline_cancel_24"
+                    app:tint="@color/white" />
+                <TextView
+                    android:id="@+id/txt_count_checked_items"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:fontFamily="@font/font_space_grotesk"
+                    android:letterSpacing="0.05"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginHorizontal="8dp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/btn_delete"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/baseline_delete_24"
+                    app:tint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </FrameLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@color/background"
+
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_rv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/blue"
+            app:tint="@color/white"
+            android:layout_gravity="bottom|end" />
+
+    </FrameLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

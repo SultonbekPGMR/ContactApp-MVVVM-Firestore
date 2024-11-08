@@ -3,5 +3,8 @@
     <style name="Base.Theme.ContactAppFirestore" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
     </style>
 </resources>

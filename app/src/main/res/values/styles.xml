@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="edt">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:layout_marginVertical">1dp</item>
+        <item name="android:textColorHint">#ABABAB</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+</resources>

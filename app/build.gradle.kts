@@ -1,11 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+    id("com.google.gms.google-services")
+
+
 }
 
 android {
     namespace = "uz.gita.contactappfirestore"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "uz.gita.contactappfirestore"
@@ -33,9 +38,30 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
+
+
+// Room dependencies
+
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.room.ktx)
+
+// Room compiler for Kapt
+
+    kapt(libs.androidx.room.compiler)
+
+
+// ViewModel and LiveData dependencies
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
+    implementation(libs.kirich1409.viewbindingpropertydelegate.full)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,4 +71,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(platform(libs.firebase.bom))
+
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.analytics)
+
+    implementation( libs.library)
+    implementation( libs.recyclerview.v7)
+    implementation( libs.support.v4)
+
+
 }

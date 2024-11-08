@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204609068657",
+    "project_id": "contact-app-181eb",
+    "storage_bucket": "contact-app-181eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204609068657:android:7165c8f79d7fd472adc5d0",
+        "android_client_info": {
+          "package_name": "uz.gita.contactappfirestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNjQzNVqYaZ0_u5yA6lYJ8nrn-B4kygtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

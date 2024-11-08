@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.contactappfirestore.presentation.screen.home.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_addOrEditScreen"
+            app:destination="@id/addOrEditScreen" />
+    </fragment>
+    <dialog
+        android:id="@+id/addOrEditScreen"
+        android:name="uz.gita.contactappfirestore.presentation.screen.addOrEdit.AddOrEditScreen"
+        android:label="AddOrEditScreen" >
+        <argument
+            android:name="contactData"
+            app:argType="uz.gita.contactappfirestore.data.model.ContactData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+</navigation>
